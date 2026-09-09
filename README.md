@@ -1,4 +1,4 @@
-# BHUMI-AI: AI-Assisted Land Document Intelligence & Verification Platform
+# QUBIX-AI: AI-Assisted Land Document Intelligence & Verification Platform
 > **"Verify Before You Approve."**  
 > Developed by **Team HEXA TITANS** for the 24-Hour National-Level Hackathon 2026.
 
@@ -20,10 +20,10 @@ In Tamil Nadu land registration (**TNREGINET / Star 2.0 / e-Services**), citizen
 
 **The Critical Vulnerability:** While citizens submit these documents online, cross-document verification is still manual for Sub-Registrars and Revenue Officials. Fraudulent submissions—such as swapping survey numbers (e.g. EC referencing Survey 124/3 while Patta references 124/2), impersonation (Suresh Kumar selling land registered to Ramesh Kumar), or duplicate mortgaging—frequently slip through manual checks.
 
-**The Solution:** **BHUMI-AI** is an explainable AI-assisted pre-verification platform. It ingests multi-format documents, classifies them, extracts structured entities (in Tamil & English), performs 10-point cross-document consistency checks, evaluates duplicate application risk, calculates an explainable risk score (0–100), and presents Sub-Registrars with side-by-side visual diffs, natural-language explainable AI panels, and an immutable government audit trail.
+**The Solution:** **QUBIX-AI** is an explainable AI-assisted pre-verification platform. It ingests multi-format documents, classifies them, extracts structured entities (in Tamil & English), performs 10-point cross-document consistency checks, evaluates duplicate application risk, calculates an explainable risk score (0–100), and presents Sub-Registrars with side-by-side visual diffs, natural-language explainable AI panels, and an immutable government audit trail.
 
 > [!IMPORTANT]
-> **Statutory Pre-Verification Mandate**: BHUMI-AI is strictly an AI-assisted decision support system. It provides explainable anomaly detection; final statutory determination remains under the executive authority of the authorized human Sub-Registrar / Revenue Officer.
+> **Statutory Pre-Verification Mandate**: QUBIX-AI is strictly an AI-assisted decision support system. It provides explainable anomaly detection; final statutory determination remains under the executive authority of the authorized human Sub-Registrar / Revenue Officer.
 
 ---
 
@@ -226,7 +226,7 @@ $$\text{Risk Score} = \min\left(100.0, \sum \text{Risk Points}\right)$$
 
 ## ⚡ 1-Click Live Demonstration Scenarios
 
-BHUMI-AI features a built-in **1-Click Demo Mode** on the top navigation bar. Click **"Load Demo Case"** to experience:
+QUBIX-AI features a built-in **1-Click Demo Mode** on the top navigation bar. Click **"Load Demo Case"** to experience:
 
 | Scenario | Details | Expected AI Outcome |
 | :--- | :--- | :--- |
@@ -308,15 +308,15 @@ docker compose up --build
 
 1. **Minute 1: The Problem (Hook)**
    - *"Respected judges, Tamil Nadu has digitized land registration through TNREGINET, but cross-document verification remains entirely manual. A Sub-Registrar must compare Patta, Chitta, EC, and Sale Deeds by hand. If an EC has Survey No. 124/3 while the deed says 124/2, fraudulent registrations slip through."*
-2. **Minute 2: Introducing BHUMI-AI (Solution)**
-   - *"We built BHUMI-AI: 'Verify Before You Approve'. Watch our live enterprise dashboard. It monitors total cases, risk distribution, and common discrepancies across districts."*
+2. **Minute 2: Introducing QUBIX-AI (Solution)**
+   - *"We built QUBIX-AI: 'Verify Before You Approve'. Watch our live enterprise dashboard. It monitors total cases, risk distribution, and common discrepancies across districts."*
 3. **Minute 3: Triggering AI Verification (Live Demo)**
    - *Click "Load Demo Case" &rarr; "Demo 2: Survey Number Mismatch".*
    - *"Notice what happened instantly: All 4 documents were processed through our OCR pipeline, classifying them as Patta, Chitta, EC, and Sale Deed. Our 10-rule cross-document engine flags a CRITICAL conflict: 3 documents identify the property as Survey 124/2, but the EC identifies it as 124/3."*
 4. **Minute 4: Explainable AI & Side-by-Side Comparator**
    - *"Judges, look at Section 3 and Section 4: We provide a side-by-side visual viewer highlighting the conflicting field in red. Section 5 shows our Explainable AI Panel: it explains in plain English why the score is 78/100 (Critical Risk), with +35 points for survey mismatch and +25 for subdivision mismatch."*
 5. **Minute 5: Officer Workflow, PDF Report & Conclusion**
-   - *"The officer can now click 'Officer Decision' &rarr; Escalate or Verify with mandatory remarks. Every action is written to our tamper-evident audit trail, and with one click, an official watermarked PDF verification report is generated. BHUMI-AI protects citizens, prevents fraud, and accelerates genuine land registrations."*
+   - *"The officer can now click 'Officer Decision' &rarr; Escalate or Verify with mandatory remarks. Every action is written to our tamper-evident audit trail, and with one click, an official watermarked PDF verification report is generated. QUBIX-AI protects citizens, prevents fraud, and accelerates genuine land registrations."*
 
 ---
 
@@ -333,8 +333,8 @@ docker compose up --build
 
 ## ❓ Judge Q&A Cheat Sheet
 
-- **Q: Does BHUMI-AI replace the Sub-Registrar?**
-  - *A: Absolutely not. BHUMI-AI is strictly an AI-assisted pre-verification decision support platform. Final statutory determination remains exclusively with the human government officer.*
+- **Q: Does QUBIX-AI replace the Sub-Registrar?**
+  - *A: Absolutely not. QUBIX-AI is strictly an AI-assisted pre-verification decision support platform. Final statutory determination remains exclusively with the human government officer.*
 - **Q: How does the system handle Tamil script OCR?**
   - *A: The pipeline supports bilingual Tamil (`tam`) and English (`eng`) unicode patterns. If local Tesseract language packs are absent, our regex and PyMuPDF text stream extraction continues uninterrupted.*
 - **Q: What happens if two names are spelled slightly differently (e.g. Ramesh Kumar vs R. Ramesh Kumar)?**
