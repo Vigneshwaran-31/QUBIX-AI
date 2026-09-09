@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./bhumi.db
+      - SECRET_KEY=bhumi-super-secret-key-tamilnadu-hexatitans-2026-verify-before-approve
+      - AI_PROVIDER=local
+    volumes:
+      - backend_data:/app/uploads
+      - ./sample_data:/sample_data
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  backend_data:
